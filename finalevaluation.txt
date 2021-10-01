@@ -1,0 +1,82 @@
+import sys
+from random import randrange
+
+class Pet(object):
+    def init(self, species = None, name = ""):
+        self.species = species
+        self.name = name
+
+    def __str__(species):
+        state= "     I'm " + species.species + ". "
+        return state
+
+class Cat(Pet):
+    def _init_(self,name="",hates="Dogs"):
+        self.name=Cat
+        self.name=name
+    def str(name):
+        name="iam "+ name.name +"."
+        return name
+
+
+class Dog(Pet):
+    def _init_(self,name="",chases="Cats"):
+        self.name="Dog"
+        self.name=name
+        print(('Species of': {Dog}))
+
+
+def whichone(petlist, name):
+    for pet in petlist:
+        if pet.name == name:
+            return pet
+    return None # no pet matched
+
+pet_types = {'dog': Dog,'lab': Dog,'poodle': Dog, 'cat': Cat,'kitty':Cat, 'shittu':Dog,"kittss":Dog,"licky":Cat,"Feerr":Cat}
+
+
+
+
+def main():
+    animals = []
+
+
+    pet_name = input("what do you want to name your pet?")
+    pet_type = input("what type of animal is your pet?")
+    if (pet_type != {'dog', 'cat', 'harmster', 'horse'}):
+            print('Incorrect input')
+    my_pet = Pet(pet_name, pet_type)
+
+    print(' YOU HAVE ENTERED 5 DOGS')
+    print("YOU have entered 3 cats")
+
+    option = ""
+    base_prompt = """
+        Quit
+        WElCOME <petname_with_no_spaces> <pet_type - choose dog, cat, lab, poodle, bird, or another unknown pet type>
+
+        Choice: """
+    feedback = ""
+    while True:
+        action = input(feedback + "\n" + base_prompt)
+        feedback = ""
+        words = action.split()
+        if len(words) > 0:
+            command = words[0]
+        else:
+            command = None
+        if command == "Quit":
+            print("Exiting...")
+            return
+class Pet:
+   def hello(self):
+      print("In Class Pet")
+
+class Cat(Pet):
+   def hello(self):
+      print("In Cat")
+
+
+class Dog(Pet):
+   def hello(self):
+      print("In Dog")
